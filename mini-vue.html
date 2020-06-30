@@ -190,7 +190,7 @@
         },
       };
 
-      function mountApp(component, container) {
+      function createApp(component, container) {
         let isMounted = false;
         let prevVdom;
         watchEffect(() => {
@@ -208,7 +208,7 @@
         });
       }
 
-      mountApp(App, document.getElementById("app"));
+      createApp(App, document.getElementById("app"));
      
     </script>
   </body>
