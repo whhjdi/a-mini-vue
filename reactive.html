@@ -9,15 +9,15 @@
     <script>
       let activeEffect = null;
       class Dep {
-        subscributes = new Set();
+        subscribes = new Set();
 
         track() {
           if (activeEffect) {
-            this.subscributes.add(activeEffect);
+            this.subscribes.add(activeEffect);
           }
         }
         trigger() {
-          this.subscributes.forEach((effect) => {
+          this.subscribes.forEach((effect) => {
             effect();
           });
         }
@@ -64,7 +64,7 @@
         count: 0,
       });
       watchEffect(() => {
-        console.log(state.count, state.msg);
+        console.log(state.count);
       });
     </script>
   </body>

@@ -22,11 +22,11 @@
                 }
                 track() {
                     if (activeEffect) {
-                        this.subscributes.add(activeEffect);
+                        this.subscribes.add(activeEffect);
                     }
                 }
                 trigger() {
-                    this.subscributes.forEach((effect) => {
+                    this.subscribes.forEach((effect) => {
                         effect();
                     });
                 }
